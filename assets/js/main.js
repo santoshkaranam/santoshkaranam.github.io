@@ -87,7 +87,65 @@
         return false;
       });
 
+    /* Typing Effect for Hero
+    ========================================================*/
+    var phrases = [
+      'Full Stack Developer & Researcher',
+      '.NET | React | Next.js | TypeScript',
+      'Azure | AWS | Google Cloud',
+      'GIS | Mapping | Citizen Science',
+      'DevOps | Kubernetes | Helm',
+      'IIASA NODES Research Group'
+    ];
+    var phraseIndex = 0;
+    var charIndex = 0;
+    var isDeleting = false;
+    var typeSpeed = 80;
+    var deleteSpeed = 40;
+    var pauseTime = 2000;
+    var typedEl = document.getElementById('typed-output');
 
+    function typeEffect() {
+      if (!typedEl) return;
+      var currentPhrase = phrases[phraseIndex];
+
+      if (isDeleting) {
+        typedEl.textContent = currentPhrase.substring(0, charIndex - 1);
+        charIndex--;
+      } else {
+        typedEl.textContent = currentPhrase.substring(0, charIndex + 1);
+        charIndex++;
+      }
+
+      var timeout = isDeleting ? deleteSpeed : typeSpeed;
+
+      if (!isDeleting && charIndex === currentPhrase.length) {
+        timeout = pauseTime;
+        isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        timeout = 500;
+      }
+
+      setTimeout(typeEffect, timeout);
+    }
+
+    setTimeout(typeEffect, 1500);
+
+    /* Smooth scroll for anchor links
+    ========================================================*/
+    $('a[href*="#"]:not([href="#"])').on('click', function(e) {
+      if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
+        var target = $(this.hash);
+        if (target.length) {
+          e.preventDefault();
+          $('html, body').animate({
+            scrollTop: target.offset().top - 70
+          }, 600);
+        }
+      }
+    });
 
   });      
 

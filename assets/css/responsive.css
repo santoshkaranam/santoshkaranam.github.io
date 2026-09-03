@@ -78,4 +78,22 @@
   .footer-right-area {
     margin-top: 20px;
   }
+  .pub-item h4 {
+    font-size: 14px;
+  }
+  .pub-item {
+    padding: 15px 18px;
+  }
+  .skill-category {
+    margin-bottom: 15px;
+  }
+  .counter-section .counter .counterUp {
+    font-size: 32px;
+  }
+  .counter-section .counter p {
+    font-size: 12px;
+  }
+  #projects .services-item {
+    min-height: auto;
+  }
 }
