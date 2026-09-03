@@ -1,99 +1,133 @@
-/* only small desktops */
-@media (min-width: 992px) and (max-width: 1199px) {
-  #hero-area .contents .head-title {
-    font-size: 40px;
-  }
-  .services-item .services-content h3 a {
-    font-size: 14px;
-  }
+/* ==========================================================================
+   RESPONSIVE.CSS - Dark theme responsive styles
+   ========================================================================== */
+
+/* Large Desktops */
+@media (min-width: 1400px) {
+  .container { max-width: 1320px; }
 }
 
-/* tablets */
+/* Small Desktops */
+@media (max-width: 1199px) {
+  .hero h1 { font-size: 48px; }
+  .hero-stats { gap: 32px; }
+  .footer-content { grid-template-columns: 1fr 1fr; gap: 32px; }
+}
+
+/* Tablets */
 @media (max-width: 991px) {
-  .section-title {
-    font-size: 30px;
-    margin-bottom: 30px;
-  }
-  .services-item .services-content h3 a {
-    font-size: 14px;
-  }
-  .services-item {
-    margin-bottom: 20px;
-  }
-}
+  .nav-links { display: none; }
+  .nav-cta { display: none; }
+  .mobile-toggle { display: flex; }
 
-/* only small tablets */
-@media (min-width: 768px) and (max-width: 991px) {
-  .section-title {
-    font-size: 26px;
-    margin-bottom: 30px;
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: var(--bg-primary);
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
   }
-  .services-item .services-content h3 a {
-    font-size: 16px;
-  }
-  .services-item {
-    margin-bottom: 20px;
-  }
-  .counter-section .counter p {
-    font-size: 14px;
-  }
-}
 
-/* mobile or only mobile */
-@media (max-width: 767px) {
-  .section-title {
-    font-size: 22px;
-    margin-bottom: 30px;
-  }
-  .section-sub {
-    font-size: 16px;
-  }
-  .navbar-brand img {
-    margin: 5px 0;
-  }
-  #hero-area .contents {
-    padding: 100px 0px 60px 0px;
-  }
-  #hero-area .contents .head-title {
-    font-size: 22px;
-  }
-  #hero-area .contents h5 {
-    font-size: 32px;
-  }
-  #hero-area .contents p {
+  .nav-links.active a {
     font-size: 20px;
+    padding: 16px 32px;
   }
-  .services-item {
-    margin-bottom: 20px;
+
+  .hero h1 { font-size: 40px; }
+  .hero-description { font-size: 16px; }
+  .hero-stats { gap: 24px; }
+  .hero-stat .number { font-size: 28px; }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
-  .timeline li .line-title {
-    line-height: 26px;
+
+  .about-image-container { max-width: 400px; margin: 0 auto; }
+
+  .counter-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+
+  .projects-grid { grid-template-columns: 1fr; }
+
+  .contact-grid { grid-template-columns: 1fr; }
+
+  .footer-content { grid-template-columns: 1fr; gap: 32px; }
+
+  .section-padding { padding: 70px 0; }
+
+  .cta-box { padding: 60px 40px; }
+}
+
+/* Small Tablets */
+@media (max-width: 767px) {
+  .hero { min-height: 90vh; }
+  .hero h1 { font-size: 32px; }
+  .hero-typing { font-size: 14px; }
+  .hero-description { font-size: 14px; }
+  .hero-stats { flex-direction: column; gap: 16px; }
+  .hero-stat { display: flex; align-items: center; gap: 12px; }
+  .hero-stat .number { font-size: 24px; }
+  .hero-actions { flex-direction: column; }
+  .hero-actions .btn { width: 100%; justify-content: center; }
+
+  .scroll-indicator { display: none; }
+
+  .about-info-grid { grid-template-columns: 1fr; }
+
+  .skills-grid { grid-template-columns: 1fr; }
+
+  .counter-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .counter-item { padding: 24px 16px; }
+  .counter-number { font-size: 36px; }
+
+  .pub-card { padding: 20px; }
+  .pub-card h4 { font-size: 14px; }
+
+  .page-header { padding: 120px 0 60px; }
+  .page-header .section-title { font-size: 32px; }
+
+  .cert-grid { grid-template-columns: 1fr; }
+
+  .timeline-container { padding-left: 30px; }
+
+  .cta-box { padding: 40px 24px; }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
   }
-  .timeline li:first-child i {
-    margin: -12px -40px;
+
+  .back-to-top { bottom: 20px; right: 20px; width: 40px; height: 40px; font-size: 14px; }
+}
+
+/* Mobile */
+@media (max-width: 479px) {
+  .hero h1 { font-size: 28px; letter-spacing: -0.5px; }
+  .hero-badge { font-size: 11px; padding: 6px 14px; }
+
+  .section-label { font-size: 11px; letter-spacing: 2px; }
+  .section-title { font-size: 28px; }
+  .section-subtitle { font-size: 15px; }
+
+  .btn { padding: 12px 24px; font-size: 12px; }
+
+  .about-experience-badge {
+    bottom: -10px;
+    right: -10px;
+    padding: 14px 18px;
   }
-  .contact-form-area {
-    padding: 40px 0px;
-  }
-  .footer-right-area {
-    margin-top: 20px;
-  }
-  .pub-item h4 {
-    font-size: 14px;
-  }
-  .pub-item {
-    padding: 15px 18px;
-  }
-  .skill-category {
-    margin-bottom: 15px;
-  }
-  .counter-section .counter .counterUp {
-    font-size: 32px;
-  }
-  .counter-section .counter p {
-    font-size: 12px;
-  }
-  #projects .services-item {
-    min-height: auto;
-  }
+  .about-experience-badge .number { font-size: 32px; }
+
+  .counter-number { font-size: 28px; }
+
+  .project-card-header { padding: 20px 20px 0; }
+  .project-card-body { padding: 16px 20px 20px; }
+
+  .contact-info-card,
+  .contact-form-card { padding: 24px; }
 }

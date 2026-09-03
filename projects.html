@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Projects by Santosh Karanam - Citizen Science Platforms, GIS Applications, Cloud Solutions.">
+  <title>Projects | Santosh Karanam</title>
+  <link rel="icon" type="image/png" href="assets/img/logo.png">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/fonts/simple-line-icons.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <div id="preloader" style="position:fixed;top:0;left:0;width:100%;height:100%;background:var(--bg-primary);z-index:99999;display:flex;align-items:center;justify-content:center;transition:opacity 0.5s;">
+    <div style="text-align:center;"><div style="width:50px;height:50px;border:3px solid var(--border-color);border-top-color:var(--accent-cyan);border-radius:50%;animation:spinSlow 1s linear infinite;margin:0 auto 16px;"></div></div>
+  </div>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo"><img src="assets/img/logo.png" alt="SK"><span>Santosh<span class="logo-dot">.</span></span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="publications.html">Research</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="btn btn-primary btn-sm nav-cta magnetic-hover">Let's Talk</a>
+      <div class="mobile-toggle"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <section class="page-header">
+    <div class="container">
+      <span class="section-label reveal">Portfolio</span>
+      <h1 class="section-title reveal delay-1">My <span class="gradient-text">Projects</span></h1>
+      <p class="section-subtitle reveal delay-2">Software applications that aid scientific research, citizen science, and geospatial analysis.</p>
+      <div class="breadcrumb reveal delay-3"><a href="index.html">Home</a> <i class="fa fa-chevron-right" style="font-size:10px;"></i> Projects</div>
+    </div>
+  </section>
+
+  <section class="section-padding projects-section">
+    <div class="container">
+      <div class="projects-filter reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="citizen-science">Citizen Science</button>
+        <button class="filter-btn" data-filter="gis">GIS & Mapping</button>
+        <button class="filter-btn" data-filter="mobile">Mobile</button>
+        <button class="filter-btn" data-filter="agriculture">Agriculture</button>
+        <button class="filter-btn" data-filter="product">Products</button>
+      </div>
+
+      <div class="projects-grid stagger-reveal">
+        <div class="project-card tilt-card" data-category="citizen-science">
+          <div class="project-card-header">
+            <div class="project-icon" style="background:rgba(0,212,255,0.1);color:var(--accent-cyan);"><i class="fa fa-globe"></i></div>
+            <div class="project-links"><a href="https://pppui.cloud.geo-wiki.org/" target="_blank"><i class="fa fa-external-link"></i></a></div>
+          </div>
+          <div class="project-card-body">
+            <h3>Picture Pile</h3>
+            <p>A citizen science platform for rapid satellite image classification. Users help classify imagery to support land cover mapping, deforestation monitoring, and SDG tracking. Features gamification elements to engage citizen scientists.</p>
+            <div class="project-tech"><span>React</span><span>.NET Core</span><span>Azure</span><span>GIS</span><span>PostgreSQL</span></div>
+          </div>
+        </div>
+
+        <div class="project-card tilt-card" data-category="mobile">
+          <div class="project-card-header">
+            <div class="project-icon" style="background:rgba(124,58,237,0.1);color:var(--accent-purple);"><i class="fa fa-satellite"></i></div>
+            <div class="project-links"><a href="https://www.camaliot.org/" target="_blank"><i class="fa fa-external-link"></i></a></div>
+          </div>
+          <div class="project-card-body">
+            <h3>CAMALIOT</h3>
+            <p>GNSS satellite data collection app funded by ESA. Collects raw satellite signals from Android phones to improve weather forecasting, particularly rainfall prediction, and space weather monitoring using machine learning.</p>
+            <div class="project-tech"><span>Android</span><span>.NET</span><span>GNSS</span><span>Machine Learning</span><span>ESA</span></div>
+          </div>
+        </div>
+
+        <div class="project-card tilt-card" data-category="gis">
+          <div class="project-card-header">
+            <div class="project-icon" style="background:rgba(0,255,136,0.1);color:var(--accent-green);"><i class="fa fa-map"></i></div>
+            <div class="project-links"><a href="https://laco-wiki.net" target="_blank"><i class="fa fa-external-link"></i></a></div>
+          </div>
+          <div class="project-card-body">
+            <h3>LACO-Wiki</h3>
+            <p>Land Cover Validation Platform used by the global research community for 12+ years. Provides a complete pipeline from dataset upload to confusion matrix generation with accuracy assessment metrics.</p>
+            <div class="project-tech"><span>Web GIS</span><span>PostGIS</span><span>Leaflet</span><span>JavaScript</span><span>Python</span></div>
+          </div>
+        </div>
+
+        <div class="project-card tilt-card" data-category="agriculture">
+          <div class="project-card-header">
+            <div class="project-icon" style="background:rgba(255,136,0,0.1);color:var(--accent-orange);"><i class="fa fa-seedling"></i></div>
+            <div class="project-links"><a href="https://worldcereal-rdm.geo-wiki.org/" target="_blank"><i class="fa fa-external-link"></i></a></div>
+          </div>
+          <div class="project-card-body">
+            <h3>WorldCereal Reference Data Module</h3>
+            <p>Cloud-based processing system for global crop mapping. Enables anyone to train and apply cropland/crop type detection models using open Earth Observation datasets for food security monitoring.</p>
+            <div class="project-tech"><span>AWS</span><span>Python</span><span>EO Data</span><span>Machine Learning</span><span>ESA</span></div>
+          </div>
+        </div>
+
+        <div class="project-card tilt-card" data-category="citizen-science">
+          <div class="project-card-header">
+            <div class="project-icon" style="background:rgba(0,212,255,0.1);color:var(--accent-cyan);"><i class="fa fa-tree"></i></div>
+            <div class="project-links"><a href="https://pure.iiasa.ac.at/id/eprint/21615/" target="_blank"><i class="fa fa-file-text-o"></i></a></div>
+          </div>
+          <div class="project-card-body">
+            <h3>Tree-Quest</h3>
+            <p>A citizen science app for collecting single-tree attributes. Supports forest mapping, carbon measurement, and biodiversity assessment through crowd-sourced tree data collection with gamification.</p>
+            <div class="project-tech"><span>React Native</span><span>.NET</span><span>Azure</span><span>Forest Ecology</span></div>
+          </div>
+        </div>
+
+        <div class="project-card tilt-card" data-category="citizen-science">
+          <div class="project-card-header">
+            <div class="project-icon" style="background:rgba(124,58,237,0.1);color:var(--accent-purple);"><i class="fa fa-mobile"></i></div>
+            <div class="project-links"><a href="https://pure.iiasa.ac.at/id/eprint/21616/" target="_blank"><i class="fa fa-file-text-o"></i></a></div>
+          </div>
+          <div class="project-card-body">
+            <h3>Geo-Quest</h3>
+            <p>Mobile application for easy and accurate Earth Observation-enhanced ground data collection. Supports citizen scientists in making field measurements that complement satellite imagery.</p>
+            <div class="project-tech"><span>Mobile</span><span>GPS</span><span>EO Data</span><span>Azure</span></div>
+          </div>
+        </div>
+
+        <div class="project-card tilt-card" data-category="citizen-science">
+          <div class="project-card-header">
+            <div class="project-icon" style="background:rgba(0,255,136,0.1);color:var(--accent-green);"><i class="fa fa-database"></i></div>
+            <div class="project-links"><a href="https://pppui.cloud.geo-wiki.org/" target="_blank"><i class="fa fa-external-link"></i></a></div>
+          </div>
+          <div class="project-card-body">
+            <h3>Geo-Wiki Platform</h3>
+            <p>The backbone citizen science infrastructure for IIASA. A network of platforms for crowdsourcing land cover data, validation, and reference datasets used by researchers worldwide.</p>
+            <div class="project-tech"><span>Web Platform</span><span>.NET</span><span>GIS</span><span>Crowdsourcing</span></div>
+          </div>
+        </div>
+
+        <div class="project-card tilt-card" data-category="product">
+          <div class="project-card-header">
+            <div class="project-icon" style="background:rgba(255,0,110,0.1);color:var(--accent-pink);"><i class="fa fa-code"></i></div>
+            <div class="project-links"><a href="https://www.decode-tools.com/" target="_blank"><i class="fa fa-external-link"></i></a></div>
+          </div>
+          <div class="project-card-body">
+            <h3>Decode Tools</h3>
+            <p>Official product — a suite of developer tools and utilities designed to streamline development workflows and boost productivity.</p>
+            <div class="project-tech"><span>Product</span><span>Developer Tools</span><span>Utilities</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding cta-section">
+    <div class="container">
+      <div class="cta-box reveal">
+        <h2 class="section-title">Have a Project in <span class="gradient-text">Mind</span>?</h2>
+        <p class="section-subtitle" style="text-align:center;">I'm always interested in new research collaborations and innovative software projects.</p>
+        <a href="contact.html" class="btn btn-primary ripple-btn">Get In Touch <i class="fa fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" style="margin-bottom:0;"><img src="assets/img/logo.png" alt="SK" style="height:32px;"><span>Santosh<span class="logo-dot">.</span></span></a>
+          <p>Full Stack Developer, Architect &amp; Researcher at IIASA.</p>
+          <div class="footer-social">
+            <a href="https://www.linkedin.com/in/santoshkaranam" target="_blank"><i class="icon-social-linkedin"></i></a>
+            <a href="https://github.com/santoshkaranam" target="_blank"><i class="fa fa-github"></i></a>
+            <a href="https://www.facebook.com/santosh.karanam.52" target="_blank"><i class="icon-social-facebook"></i></a>
+            <a href="https://twitter.com/santoshkaranam1" target="_blank"><i class="icon-social-twitter"></i></a>
+          </div>
+        </div>
+        <div><h4 class="footer-heading">Pages</h4><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="projects.html">Projects</a></li><li><a href="publications.html">Publications</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div><h4 class="footer-heading">Profiles</h4><ul class="footer-links"><li><a href="https://www.linkedin.com/in/santoshkaranam" target="_blank">LinkedIn</a></li><li><a href="https://github.com/santoshkaranam" target="_blank">GitHub</a></li><li><a href="https://www.c-sharpcorner.com/members/santosh-karanam" target="_blank">C# Corner</a></li><li><a href="https://www.researchgate.net/profile/Santosh-Karanam" target="_blank">ResearchGate</a></li></ul></div>
+        <div><h4 class="footer-heading">Projects</h4><ul class="footer-links"><li><a href="https://pppui.cloud.geo-wiki.org/" target="_blank">Picture Pile</a></li><li><a href="https://www.camaliot.org/" target="_blank">CAMALIOT</a></li><li><a href="https://laco-wiki.net" target="_blank">LACO-Wiki</a></li><li><a href="https://worldcereal-rdm.geo-wiki.org/" target="_blank">WorldCereal</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 Santosh Karanam. All rights reserved.</p><p>Built with <i class="fa fa-heart" style="color:var(--accent-pink);"></i> in Vienna, Austria</p></div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
